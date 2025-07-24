@@ -11,6 +11,10 @@ html, body{
   color: var(--text-color);
   font-family: var(--body-font);
 }
+.container{
+    margin-left: 25%;
+}
+
 :root {
   width: 100%;
   --primary-color: #537FE7;

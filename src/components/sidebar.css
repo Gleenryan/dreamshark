@@ -41,5 +41,5 @@
 
 .sidebar-item:hover,
 .sidebar-item.active {
-  color: var(--secondary-color) /* Duolingo green */
+  color: var(--secondary-color) 
 }

@@ -15,7 +15,7 @@ function Sidebar() {
         <Link to="/rank" className={`sidebar-item ${location.pathname === '/rank' ? 'active' : ''}`}>Rank</Link>
         <Link to="/leaderboard" className={`sidebar-item ${location.pathname === '/leaderboard' ? 'active' : ''}`}>Leaderboard</Link>
         <Link to="/profile" className={`sidebar-item ${location.pathname === '/profile' ? 'active' : ''}`}>Profile</Link>
-        <Link to="/sharkbot" className={`sidebar-item ${location.pathname === '/sharkbot' ? 'active' : ''}`}>Sharkrudi Bot</Link>
+        <Link to="/sharkbot" className={`sidebar-item ${location.pathname === '/sharkbot' ? 'active' : ''}`}>Sharkudi Bot</Link>
       </nav>
     </div>
   );
