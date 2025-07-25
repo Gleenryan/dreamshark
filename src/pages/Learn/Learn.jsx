@@ -27,7 +27,7 @@ const allSubjects = {
       },
       {
         id: 'deep',
-        title: 'Deep Work',
+        title: '20% work 80% results',
         color: '#3c9dd9',
         items: ['Focused Blocks', 'Work Rituals', 'Kill Distraction'],
       },
