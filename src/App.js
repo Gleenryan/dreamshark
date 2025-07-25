@@ -11,6 +11,8 @@ import TestRead from './pages/TestRead';
 import SharkAssessment from './pages/Sharkbot/SharkAssesment'; // <- 👈 your assessment page
 import './App.css';
 import RankCelebration from './pages/Rank/RankCelebration';
+import ForumPage from './pages/Forum/ForumPage';
+import ForumThread from './pages/Forum/ForumThread';
 
 function Layout() {
   const location = useLocation();
@@ -31,7 +33,8 @@ function Layout() {
           <Route path="/sharkbot/:lessonId" element={<SharkAssessment />} />
           <Route path="/sharkbot/:topicId" element={<Sharkbot />} />
           <Route path="/rank-celebration" element={<RankCelebration />} />
-
+          <Route path="/forum" element={<ForumPage />} />
+          <Route path="/forum/:id" element={<ForumThread />} />
 
 
         </Routes>

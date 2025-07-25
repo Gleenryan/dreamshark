@@ -2,7 +2,7 @@
 @import "~slick-carousel/slick/slick-theme.css";
 
 .rank-page {
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -20,27 +20,53 @@
 
 .rank-image-wrapper {
   width: 100%;
-  max-width: 300px;
+  max-width: 280px;
   margin: 0 auto 1rem;
   position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.rank-image-wrapper:hover {
+  transform: scale(1.03);
 }
 
 .rank-image {
   width: 100%;
+  height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: filter 0.3s;
 }
 
 .rank-image-wrapper.locked img {
   filter: grayscale(100%) brightness(0.4);
 }
 
+.lock-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(20, 20, 20, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  color: #ccc;
+  pointer-events: none;
+}
+
 .rank-name {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: bold;
   margin-top: 0.5rem;
 }
 
 .rank-subtitle {
   font-size: 1rem;
   color: #bbb;
+  margin-top: 4px;
 }

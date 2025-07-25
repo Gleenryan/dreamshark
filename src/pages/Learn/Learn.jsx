@@ -6,7 +6,7 @@ import './Learn.css';
 const allSubjects = {
   willpower: {
     title: 'WillPower & Self-Discipline',
-    color: '#537FE7',
+    color: '#C0EEF2',
     dropdowns: [
       {
         id: 'ego',

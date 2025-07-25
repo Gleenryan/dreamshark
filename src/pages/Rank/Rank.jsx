@@ -8,21 +8,21 @@ const rankData = [
     id: 'rookie',
     title: 'Rookie Shark',
     subtitle: 'Unlocked by default',
-    image: '/ranks/rookie.png',
+    image: '/assets/baby.jpeg',
     unlocked: true,
   },
   {
     id: 'warrior',
     title: 'Warrior Shark',
-    subtitle: 'Complete 1 SharkBot Assessment',
-    image: '/assets/warrior.png',
+    subtitle: 'Beat SharkBot! for the first time🦈',
+    image: '/assets/warriorfull.jpeg',
     unlocked: true,
   },
   {
     id: 'elite',
-    title: 'Elite Shark',
-    subtitle: 'Complete 3 Assessments',
-    image: '/ranks/elite.png',
+    title: '???',
+    subtitle: 'Get Golden Trophy from SharkBot',
+    image: '/assets/megalodon1.png',
     unlocked: false,
   },
 ];
@@ -46,10 +46,13 @@ const RankPage = () => {
           <div key={rank.id} className="rank-slide">
             <div className={`rank-image-wrapper ${!rank.unlocked ? 'locked' : ''}`}>
               <img
-                src={rank.unlocked ? rank.image : '/ranks/locked.png'}
+                src={rank.image}
                 alt={rank.title}
                 className="rank-image"
               />
+              {!rank.unlocked && (
+                <div className="lock-overlay">🔒</div>
+              )}
             </div>
             <h2 className="rank-name">{rank.title}</h2>
             <p className="rank-subtitle">{rank.subtitle}</p>

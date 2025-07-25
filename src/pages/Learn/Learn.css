@@ -13,7 +13,7 @@
   top: 0;
   padding: 20px;
   z-index: 10;
-  border-bottom: 2px solid var(--primary-color);
+  border-bottom: 2px solid var(--secondary-color);
   transition: background-color 0.3s ease;
   border-radius: 8px;
 }
@@ -82,7 +82,7 @@
 }
 
 .lesson-item.active {
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   color: #1e1e24;
   font-weight: bold;
 }
