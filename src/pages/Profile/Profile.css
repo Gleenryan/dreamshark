@@ -1,0 +1,116 @@
+.profile-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.profile-banner {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  background-color: var(--secondary-color);
+}
+
+.profile-name {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-flags {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.flag-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 24px; /* Made icon bigger */
+  border: 3px solid currentColor; /* uses text color as border */
+  background-color: transparent;
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.flag-box:hover {
+  transform: translateY(-4px);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.profile-stats {
+  background-color: #1e1e24;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.profile-stats h3 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+.stats-section {
+  padding: 1.5rem;
+  background-color: #2b2b33;
+  border-radius: 12px;
+  margin-top: 2rem;
+}
+
+.stats-section h2 {
+  font-size: 20px;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+.profile-title {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  color: var(--secondary-color);
+  margin-top: -10px;
+  margin-bottom: 24px;
+}
+
+.flag-box {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 26px;
+  border: 3px solid currentColor;
+  background-color: transparent;
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.flag-label {
+  font-size: 11px;
+  margin-top: 4px;
+  text-align: center;
+  font-weight: 500;
+  color: #ccc;
+}
+
+.flag-icon {
+  font-size: 26px;
+  line-height: 1;
+  margin-bottom: 4px;
+}

@@ -1,0 +1,79 @@
+/* src/pages/Sharkbot/SharkAssessment.css */
+.shark-chat-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 30px auto;
+  background-color: #1e1e24;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+}
+
+.shark-chat-header {
+  background-color: #537fe7;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 1px solid #333;
+}
+
+.shark-chat-box {
+  height: 400px;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.chat-bubble {
+  max-width: 75%;
+  padding: 10px 14px;
+  border-radius: 16px;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+.chat-bubble.bot {
+  background-color: #2b2b33;
+  align-self: flex-start;
+}
+
+.chat-bubble.user {
+  background-color: #537fe7;
+  color: white;
+  align-self: flex-end;
+}
+
+.shark-chat-input {
+  display: flex;
+  border-top: 1px solid #333;
+  background-color: #2a2a2a;
+}
+
+.shark-chat-input input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  outline: none;
+  background-color: #2a2a2a;
+  color: white;
+  font-size: 15px;
+}
+
+.shark-chat-input button {
+  padding: 0 20px;
+  background-color: #537fe7;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.shark-chat-input button:hover {
+  background-color: #3a66d8;
+}

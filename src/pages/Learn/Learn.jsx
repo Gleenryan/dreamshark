@@ -1,16 +1,23 @@
+// src/pages/Learn/Learn.jsx
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Learn.css';
 
 const allSubjects = {
   willpower: {
     title: 'WillPower & Self-Discipline',
-    color: '#58cc02',
+    color: '#537FE7',
     dropdowns: [
       {
         id: 'ego',
-        title: 'Ego is the Enemy',
+        title: 'Scroll. Sleep. Repeat. Die.',
         color: '#58cc02',
-        items: ['The Fundamentals', 'Real Case', 'Challenge Yourself'],
+        items: [
+          'They Own Your Brain',
+          'Keep Scrolling. Stay Broke',
+          'Challenge Yourself',
+          'Beat SharkBot!',
+        ],
       },
       {
         id: 'atomic',
@@ -27,7 +34,7 @@ const allSubjects = {
     ],
   },
   finance: {
-    title: 'Financial Intelligence',
+    title: 'Personal Finance & Wealth',
     color: '#d97706',
     dropdowns: [
       {
@@ -45,7 +52,7 @@ const allSubjects = {
     ],
   },
   focus: {
-    title: 'Focus & Flow',
+    title: 'Thinking Fundamentals',
     color: '#3b82f6',
     dropdowns: [
       {
@@ -62,6 +69,30 @@ const allSubjects = {
       },
     ],
   },
+  core: {
+    title: 'Core Principles & Life Values',
+    color: '#3b82f6',
+    dropdowns: [
+      {
+        id: 'values',
+        title: 'Fundamental Ethics',
+        color: '#4b5563',
+        items: ['Integrity', 'Discipline', 'Purpose'],
+      },
+    ],
+  },
+  life: {
+    title: 'Life Planning & Execution',
+    color: '#3b82f6',
+    dropdowns: [
+      {
+        id: 'planner',
+        title: 'Plan Like a Pro',
+        color: '#6b7280',
+        items: ['Vision Boards', 'Priority Mapping', 'Weekly Planning'],
+      },
+    ],
+  },
 };
 
 const Learn = () => {
@@ -70,6 +101,7 @@ const Learn = () => {
   const [hoveredBox, setHoveredBox] = useState(null);
   const [hoveredLesson, setHoveredLesson] = useState(null);
   const [activeLesson, setActiveLesson] = useState(null);
+  const navigate = useNavigate();
 
   const subject = allSubjects[currentSubjectId];
   const dropdowns = subject.dropdowns;
@@ -86,10 +118,16 @@ const Learn = () => {
     setOpenId(openId === id ? null : id);
   };
 
-  const handleLessonClick = (lesson) => {
-    setActiveLesson(lesson);
-    console.log(`Clicked on: ${lesson}`);
-  };
+  const handleLessonClick = (lesson, dropId, index) => {
+  const isSharkBot = lesson.toLowerCase().includes('sharkbot');
+  const lessonId = `${dropId}-${index}`;
+
+  if (isSharkBot) {
+    navigate(`/sharkbot/${lessonId}`);
+  } else {
+    navigate(`/video/${lessonId}`); // <-- this was missing
+  }
+};
 
   return (
     <div className="learn-page container">
@@ -106,9 +144,11 @@ const Learn = () => {
             setHoveredBox(null);
           }}
         >
-          <option value="willpower">WillPower & Self-Discipline</option>
+          <option value="willpower">Willpower & Self-Discipline</option>
           <option value="finance">Financial Intelligence</option>
-          <option value="focus">Focus & Flow</option>
+          <option value="life">Life Planning & Execution</option>
+          <option value="core">Core Principles & Life Values</option>
+          <option value="focus">Thinking Fundamentals</option>
         </select>
       </div>
 
@@ -131,8 +171,10 @@ const Learn = () => {
                 {drop.items.map((item, index) => (
                   <div
                     key={index}
-                    className={`lesson-item ${activeLesson === item ? 'active' : ''}`}
-                    onClick={() => handleLessonClick(item)}
+                    className={`lesson-item ${
+                      activeLesson === item ? 'active' : ''
+                    }`}
+                    onClick={() => handleLessonClick(item, drop.id, index)}
                     onMouseEnter={() => setHoveredLesson(item)}
                     onMouseLeave={() => setHoveredLesson(null)}
                     style={{

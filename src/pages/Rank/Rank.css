@@ -1,0 +1,46 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.rank-page {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  color: white;
+}
+
+.rank-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.rank-slide {
+  padding: 1rem;
+}
+
+.rank-image-wrapper {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto 1rem;
+  position: relative;
+}
+
+.rank-image {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.rank-image-wrapper.locked img {
+  filter: grayscale(100%) brightness(0.4);
+}
+
+.rank-name {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.rank-subtitle {
+  font-size: 1rem;
+  color: #bbb;
+}
