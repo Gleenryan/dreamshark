@@ -4,12 +4,12 @@ import { useNavigate } from 'react-router-dom';
 import './SharkAssesment.css';
 
 const fakeBotQuestions = [
-  'Welcome challenger. Are you ready to face yourself?',
-  'First: Why do you think people scroll endlessly, even when they hate it?',
-  'Interesting. Now tell me one habit you’ve changed — and how?',
-  'Last one: What will you do differently after this lesson?',
-  '🦈 Assessment complete. Verdict: PASS. Welcome to the shark pack.'
-];
+  'Let’s see if you really understand what you’re talking about.\nNo quotes. No poetic fluff.\nJust answer this:\nWhat does “Scroll. Sleep. Repeat. Die.” mean to you?\nWhat’s the warning behind it?',
+  'Hmm...\nSharp. Real. You didn’t hold back.\nYou’re not just describing the loop — you’re calling it what it is: a trade.\nTime → dopamine → emptiness → repeat.\n\nBut now I want more than that.\n\nTell me about the last time you were trapped in that cycle.\nNot someone else — you.\nWhat were you doing? What did it feel like?',
+  'That’s it, huh?\nNot because you were resting.\nNot because you needed recovery.\n\nBut because you were trapped.\nBy the illusion that you were “busy” when in fact, you were just paused as a person.\n\nNow, let’s go deeper.\nWhat’s the real reason you got stuck in that cycle?\nGive me 1 emotional reason and 1 practical reason.\nDon’t give me surface-level answers. I want truth.',
+  'That is a fact\n scrolling? Free dopamine. Zero barrier. Instant hit\n\n💡 Conclusion: You get it.\nYou’re not just aware of the scroll cycle.\nYou understand the psychology behind it.',
+  '🦈 Assessment complete. Verdict: PASS.\nYou understand the loop — and how to fight it.\nWelcome to the shark pack.'
+]
 
 const SharkAssessment = () => {
   const [messages, setMessages] = useState([]);
